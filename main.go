@@ -23,7 +23,7 @@ func (s *stripWriter) Write(p []byte) (n int, err error) {
 }
 
 func main() {
-	// 簡易フラグ手動パース（flagパッケージだとサブコマンドと相性悪いので）
+	// Manual flag parsing (flag package doesn't play well with subcommands)
 	noHeader := false
 	noExit := false
 
