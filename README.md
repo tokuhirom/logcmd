@@ -41,7 +41,7 @@ A blank line is inserted between entries when appending to an existing log, maki
 ## Install
 
 ```sh
-go install github.com/you/logcmd@latest
+go install github.com/tokuhirom/logcmd@latest
 ```
 
 Or build locally:
