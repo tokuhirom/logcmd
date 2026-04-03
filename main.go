@@ -58,6 +58,10 @@ func main() {
 	sw := &stripWriter{w: f}
 
 	if !noHeader {
+		if fi, err := f.Stat(); err == nil && fi.Size() > 0 {
+			fmt.Fprintln(sw, "")
+		}
+
 		fmt.Fprintf(sw, "=== [%s] $ %s\n", time.Now().Format("2006-01-02 15:04:05"), strings.Join(cmdArgs, " "))
 	}
 
